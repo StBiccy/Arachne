@@ -12,9 +12,8 @@ namespace Arachne {
 
 	void Application::run()
 	{
-		while (true)
+		while (true) 
 		{
-
 		}
 	}
 }
