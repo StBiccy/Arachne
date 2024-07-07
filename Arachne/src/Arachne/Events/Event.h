@@ -3,10 +3,6 @@
 #include "Arachne/Core.h"
 
 
-// will be move into precompiled header when ready
-#include <string>
-#include <functional>
-
 namespace Arachne {
 	
 	// events will be called immediatly,
@@ -85,9 +81,9 @@ namespace Arachne {
 		Event& m_Event;
 	};
 
-	inline std::string format_as(const Event& e) {
-		return e.ToString();
-	}
+	//inline std::string format_as(const Event& e) {
+	//	return e.ToString();
+	//}
 
 
 	//this is supposed to work

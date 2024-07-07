@@ -18,6 +18,9 @@ project "Arachne"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int" .. outputdir .. "/%{prj.name}")
 
+	pchheader "arapch.h"
+	pchsource "Arachne/src/arapch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
 
 //		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved, Tick, Update, Render,
 namespace Arachne {

@@ -19,12 +19,22 @@
     <ClInclude Include="src\Arachne\EntryPoint.h">
       <Filter>Arachne</Filter>
     </ClInclude>
+    <ClInclude Include="src\Arachne\Events\ApplicationEvents.h">
+      <Filter>Arachne\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Arachne\Events\Event.h">
+      <Filter>Arachne\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Arachne\Events\KeyEvent.h">
+      <Filter>Arachne\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Arachne\Events\MouseEvent.h">
       <Filter>Arachne\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Arachne\Log.h">
       <Filter>Arachne</Filter>
     </ClInclude>
+    <ClInclude Include="src\arapch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Arachne\Application.cpp">
@@ -33,5 +43,6 @@
     <ClCompile Include="src\Arachne\Log.cpp">
       <Filter>Arachne</Filter>
     </ClCompile>
+    <ClCompile Include="src\arapch.cpp" />
   </ItemGroup>
 </Project>

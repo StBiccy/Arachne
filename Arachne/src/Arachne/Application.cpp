@@ -1,3 +1,4 @@
+#include "arapch.h"
 #include "Application.h"
 
 #include "Events/ApplicationEvents.h"
@@ -19,7 +20,7 @@ namespace Arachne {
 
 		if (e.IsInCategory(EventCategoryApplication))
 		{
-			ARA_TRACE(e);
+			ARA_TRACE(e.ToString());
 		}
 
 		while (true) 

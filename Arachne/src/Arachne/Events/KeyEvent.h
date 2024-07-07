@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Arachne {
 
 	class ARACHNE_API KeyEvent : public Event
