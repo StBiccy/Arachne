@@ -9,3 +9,8 @@
 #else
 	#error Arachne only supports Windows!
 #endif // ARA_PLATFORM_WINDOWS
+
+//shifts the bits for 1 over to the left by x ammount
+// x = 1 
+// 1 (00000001) << 1 -> BIT = (00000010) 
+#define BIT(x) (1 << x)

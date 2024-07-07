@@ -4,6 +4,9 @@
     <Filter Include="Arachne">
       <UniqueIdentifier>{777D48A0-E35C-C73B-EC74-521258D32D9D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arachne\Events">
+      <UniqueIdentifier>{7B7D4942-674B-3D48-50DF-AD6E3C4C19AD}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Arachne.h" />
@@ -15,6 +18,9 @@
     </ClInclude>
     <ClInclude Include="src\Arachne\EntryPoint.h">
       <Filter>Arachne</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Arachne\Events\Event.h">
+      <Filter>Arachne\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Arachne\Log.h">
       <Filter>Arachne</Filter>
