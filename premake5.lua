@@ -16,7 +16,7 @@ IncludeDir["GLFW"] = "Arachne/vendor/GLFW/include"
 
 
 
---include "Arachne/vendor/GLFW" <<<<<<<<<<<< this is to like the premake file in glfw, I do not know why this is nessicary as such I will wait untill I do, or just remove the premake file.
+include "Arachne/vendor/GLFW" 
 
 project "Arachne"
 	location "Arachne"
@@ -44,7 +44,7 @@ project "Arachne"
 
 	links
 	{
-		"Arachne/vendor/GLFW/bin/Debug-windows-x86_64/GLFW/GLFW",
+		"GLFW",
 		"opengl32.lib"
 	}
 
