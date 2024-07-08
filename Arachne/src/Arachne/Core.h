@@ -10,11 +10,7 @@
 	#error Arachne only supports Windows!
 #endif // ARA_PLATFORM_WINDOWS
 
-#ifdef ARA_ENABLE_ASSERTS
-	#define ARA_ASSERT(x, ...) {if(!(x)) {ARA_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
-	#define ARA_CORE_ASSERT(x, ...) {if(!(x)) {ARA_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
-#else
-	#define ARA_ASSERT(x, ...)
-	#define ARA_CORE_ASSERT(x, ...)
-#endif
+//shifts the bits for 1 over to the left by x ammount
+// x = 1 
+// 1 (00000001) << 1 -> BIT = (00000010) 
 #define BIT(x) (1 << x)

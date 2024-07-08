@@ -2,13 +2,11 @@
 #include "Application.h"
 
 #include "Events/ApplicationEvents.h"
-
-#include <GLFW/glfw3.h>
+#include "Arachne/Log.h"
 
 namespace Arachne {
 	Arachne::Application::Application()
 	{
-		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Arachne::Application::~Application()
@@ -17,12 +15,16 @@ namespace Arachne {
 
 	void Application::run()
 	{
-		while (m_Running) 
-		{
-			glClearColor(1, 0, 1, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
-			m_Window->OnUpdate();
 
+		WindowResizeEvent e(100, 200);
+
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			ARA_TRACE(e.ToString());
+		}
+
+		while (true) 
+		{
 		}
 	}
 }

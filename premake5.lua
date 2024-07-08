@@ -10,21 +10,13 @@ workspace "Arachne"
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Includes relative to the root folder
-IncludeDir = {}
-IncludeDir["GLFW"] = "Arachne/vendor/GLFW/include"
-
-
-
---include "Arachne/vendor/GLFW" <<<<<<<<<<<< this is to like the premake file in glfw, I do not know why this is nessicary as such I will wait untill I do, or just remove the premake file.
-
 project "Arachne"
 	location "Arachne"
 	kind "SharedLib"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int" .. outputdir .. "/%{prj.name}")
 
 	pchheader "arapch.h"
 	pchsource "Arachne/src/arapch.cpp"
@@ -38,14 +30,7 @@ project "Arachne"
 	includedirs
 	{
 			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include",
-			"%{IncludeDir.GLFW}"
-	}
-
-	links
-	{
-		"Arachne/vendor/GLFW/bin/Debug-windows-x86_64/GLFW/GLFW",
-		"opengl32.lib"
+			"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
@@ -65,15 +50,15 @@ project "Arachne"
 		}
 
 	filter "configurations:Debug"
-		defines "ARA_DEBUG"
+		defines "HZ_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "ARA_RELASE"
+		defines "HZ_RELASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines "ARA_DIST"
+		defines "HZ_DIST"
 		optimize "On"
 
 project "Sandbox"
@@ -82,7 +67,7 @@ project "Sandbox"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
@@ -108,19 +93,18 @@ project "Sandbox"
 
 		defines
 		{
-
 			"ARA_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
-		defines "ARA_DEBUG"
+		defines "HZ_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "ARA_RELASE"
+		defines "HZ_RELASE"
 		optimize "On"
 
 	filter "configurations:Dist"
-		defines "ARA_DIST"
+		defines "HZ_DIST"
 		optimize "On"
 
